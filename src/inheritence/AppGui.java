@@ -27,7 +27,7 @@ public class AppGui extends JFrame{
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(panel1);
         this.pack();
-
+        JFrame f = new JFrame();
         Ahp ahp = new Ahp();
         TesTulis tesTulis = new TesTulis();
         Berkas berkas = new Berkas();
@@ -44,10 +44,10 @@ public class AppGui extends JFrame{
                 int inputWawancara = Integer.parseInt(textField4.getText());
 
                 double hasil = ((tesTulis.setTesTulis(inputTesTulis)*tesTulis.getRating())+(berkas.setBerkas(inputBerkas)*berkas.getRating()+(makalahPresentasi.setMakalahPresentasi(inputMakalahPresentasi)*makalahPresentasi.getRating())+(wawancara.setWawancara(inputWawancara)+wawancara.getRating())))/4;
-                if (!(hasil >= 70)) {
-                    textMain.setText("Maaf Anda Dinyatakan Tidak Lulus Dalam Penerimaan Calon Asisten Dengan Nilai "+ hasil);
-                }else if (hasil > 70){
-                    textMain.setText("Selamat Anda Dinyatakan Lulus Dalam Penerimaan Calon Asisten Dengan Nilai "+hasil);
+                if (!(hasil > 70)) {
+                        JOptionPane.showMessageDialog(f,"Maaf Anda Dinyatakan Tidak Lulus Dalam Penerimaan Calon Asisten Dengan Nilai" + hasil);
+                }else if (hasil >= 70){
+                    JOptionPane.showMessageDialog(f,"Selamat Anda Dinyatakan Lulus Dalam Penerimaan Calon Asisten Dengan Nilai " + hasil);
                 }
             }
         });

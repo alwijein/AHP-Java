@@ -5,19 +5,17 @@ public class Ahp {
     String klasifikasi;
 
     public double setRating(int rating){
-        double x = 0;
         switch(rating){
-            case 1: x = 0;
+            case 1: this.rating = 0;
             break;
-            case 2: x = 0.25;
+            case 2: this.rating = 0.25;
             break;
-            case 3: x = 0.5;
+            case 3: this.rating = 0.5;
             break;
-            case 4: x = 0.75;
+            case 4: this.rating = 0.75;
             break;
-            case 5: x = 1;
+            case 5: this.rating = 1;
         }
-        this.rating = x;
         return this.rating;
     }
 

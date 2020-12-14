@@ -1,9 +1,9 @@
 package inheritence;
 
 public class Wawancara extends Ahp{
-    int wawancara;
+    private int wawancara;
 
-    public int setWawancara(int wawancara){
+    public void setWawancara(int wawancara){
         if (wawancara > 85){
             setRating(5);
         }else if (wawancara >= 70 && wawancara <= 85){
@@ -16,6 +16,8 @@ public class Wawancara extends Ahp{
             setRating(1);
         }
         this.wawancara = wawancara;
-        return this.wawancara;
+    }
+    public int getWawancara() {
+        return wawancara;
     }
 }

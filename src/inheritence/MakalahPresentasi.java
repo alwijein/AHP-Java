@@ -1,9 +1,9 @@
 package inheritence;
 
 public class MakalahPresentasi extends Ahp{
-    int makalahPresentasi;
+    private int makalahPresentasi;
 
-    public int setMakalahPresentasi(int makalahPresentasi){
+    public void setMakalahPresentasi(int makalahPresentasi){
         if (makalahPresentasi > 85){
             setRating(5);
         }else if (makalahPresentasi >= 70 && makalahPresentasi <= 85){
@@ -16,6 +16,8 @@ public class MakalahPresentasi extends Ahp{
             setRating(1);
         }
         this.makalahPresentasi = makalahPresentasi;
-        return this.makalahPresentasi;
+    }
+    public int getMakalahPresentasi() {
+        return makalahPresentasi;
     }
 }

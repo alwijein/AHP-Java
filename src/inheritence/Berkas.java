@@ -1,8 +1,9 @@
 package inheritence;
 
 public class Berkas extends Ahp{
-    int berkas;
-    public int setBerkas(int berkas){
+    private int berkas;
+
+    public void setBerkas(int berkas){
         if (berkas > 85){
             setRating(5);
         }else if (berkas >= 70 && berkas <= 85){
@@ -15,6 +16,8 @@ public class Berkas extends Ahp{
             setRating(1);
         }
         this.berkas = berkas;
-        return this.berkas;
+    }
+    public int getBerkas() {
+        return berkas;
     }
 }

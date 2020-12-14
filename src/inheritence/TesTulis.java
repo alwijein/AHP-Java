@@ -1,9 +1,9 @@
 package inheritence;
 
 public class TesTulis extends Ahp{
-    int  tesTulis;
+    private int  tesTulis;
 
-    public int setTesTulis(int tesTulis) {
+    public void setTesTulis(int tesTulis) {
         if (tesTulis > 85) {
             setRating(5);
         } else if (tesTulis >= 70 && tesTulis <= 85) {
@@ -16,6 +16,9 @@ public class TesTulis extends Ahp{
             setRating(1);
         }
         this.tesTulis = tesTulis;
-        return this.tesTulis;
+    }
+
+    public int getTesTulis() {
+        return tesTulis;
     }
 }
